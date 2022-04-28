@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+}
+
+#image {
+    background-image: url("image.jpeg");
+    height: 300px;
+    width: 200px;
+    display: inline-block;
+    background-size: contain;
+    margin-top: 200px;
+}
