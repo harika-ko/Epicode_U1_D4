@@ -6,7 +6,7 @@ body {
 #image {
     background-image: url("image.jpeg");
     height: 608px;
-    width: 474px;
+    width: 400px;
     display: inline-block;
     background-size: contain;
     margin-top: 200px;
@@ -16,6 +16,10 @@ body {
     z-index: 1;
 }
 
+#save-button {
+    visibility: hidden;
+}
+
 #image:hover #image-overlay {
     background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(5, 30, 48, 0.47429394120929624) 0%);
     position: absolute;
@@ -23,22 +27,36 @@ body {
     bottom: 0px;
     left: 0px;
     right: 0px;
+    visibility: visible;
     z-index: 2;
+}
+
+#description {
+    visibility: hidden;
+}
+
+#download {
+    visibility: hidden;
+}
+
+#ellipsis {
+    visibility: hidden;
 }
 
 #image:hover #save-button {
     color: white;
     position: absolute;
     top: 8px;
-    left: 400px;
+    left: 330px;
     background-color: red;
     border-radius: 40%;
     padding: 15px;
     cursor: pointer;
+    visibility: visible;
     z-index: 3;
 }
 
-#image:hover #description {
+#image:hover #info #description {
     background-color: white;
     font-size: 15pt;
     position: absolute;
@@ -49,10 +67,11 @@ body {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    visibility: visible;
     z-index: 4;
 }
 
-#image:hover #ellipsis {
+#image:hover #info #ellipsis {
     background-color: white;
     position: absolute;
     height: 30px;
@@ -62,17 +81,19 @@ body {
     right: 5px;
     padding: 5px;
     border-radius: 50%;
+    visibility: visible;
     z-index: 5;
 }
 
 #image:hover #download {
     background-color: white;
     position: relative;
-    left: 45%;
+    left: 55%;
     margin-top: 560px;
     height: 30px;
     width: 30px;
     padding: 5px;
     border-radius: 50%;
+    visibility: visible;
     z-index: 6;
 }
