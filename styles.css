@@ -1,12 +1,78 @@
 body {
     text-align: center;
+    font-family: Arial;
 }
 
 #image {
     background-image: url("image.jpeg");
-    height: 300px;
-    width: 200px;
+    height: 608px;
+    width: 474px;
     display: inline-block;
     background-size: contain;
     margin-top: 200px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#image:hover #image-overlay {
+    background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(5, 30, 48, 0.47429394120929624) 0%);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+}
+
+#image:hover #save-button {
+    color: white;
+    position: absolute;
+    top: 8px;
+    left: 400px;
+    background-color: red;
+    border-radius: 40%;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#image:hover #description {
+    background-color: white;
+    font-size: 15pt;
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    padding: 8px;
+    border-radius: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    z-index: 4;
+}
+
+#image:hover #ellipsis {
+    background-color: white;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    font-size: 20pt;
+    bottom: 10px;
+    right: 5px;
+    padding: 5px;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+#image:hover #download {
+    background-color: white;
+    position: relative;
+    left: 45%;
+    margin-top: 560px;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    z-index: 6;
 }
